@@ -52,6 +52,7 @@
 .item-categoria:hover .item-title-categoria{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.431);
+
 }
 
 .item-categoria:hover .item-title-categoria p{
