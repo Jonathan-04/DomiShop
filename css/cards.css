@@ -1,0 +1,108 @@
+.container-cards{
+    width: 95%;
+    margin-top: 130px;
+    text-align: center;
+}
+
+
+
+.cards{
+    width: 220px;
+    height: 400px;
+    margin: 30px;
+    box-shadow:0px 13px 21px -5px rgba(104, 104, 104, 0.176);
+}
+
+.container-cards-img{
+    display: flex;
+    overflow: hidden;
+}
+
+.cards a img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    animation: fade 0.6s;
+}
+
+.img-back{
+    display: none;
+}
+
+.container-cards-img:hover .img-back{
+    display: block;
+}
+
+.container-cards-img:hover .img-front{
+    display: none;
+}
+
+
+.cards h3{
+    font-size: 16px;
+    color: rgb(67, 67, 67);
+}
+
+.cards span img{
+    width: 24px;
+    height: 24px;
+}
+
+.options-cards{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    justify-content: space-around;
+
+}
+
+.options-cards a{
+    display: none;
+    width: 50%;
+    padding: 2px;
+    transition: all 300ms;
+}
+
+.options-cards a:nth-child(1):hover{
+    background-color: rgb(255, 206, 206);
+}
+
+.options-cards a:nth-child(2):hover{
+    background-color: rgb(219, 255, 206);
+}
+
+.cards:hover .options-cards a{
+    display: block;
+}
+
+.slider-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px auto 10px auto;
+    padding: 0px 10px;
+}
+
+.slider-btn button{
+    position: static !important;
+}
+
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 620px){
+
+    .container-cards{
+        margin-top: -100px;
+    }
+}
