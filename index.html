@@ -19,9 +19,11 @@
       <i class="menu-icon-header"><img src="assets/menu.svg" alt="menu-header" /></i>
       <nav class="container-nav-menu" id="nav-menu-show">
         
+        <!-- Menú desplegable -->
         <div class="items-show">
         <ul class="nav-menu">
 
+          <!-- Items del Menú -->
           <li class="option-nav"><span>MUJERES</span>
             <ul class="nav-menu-items">          
               <li>Camisas</li>
@@ -68,7 +70,7 @@
             <img src="assets/shopping_cart.svg" alt="shopping_cart-item" />
           </li>
           <li>
-            <img src="assets/login.svg" alt="login-item" />
+            <a href="login.html"><img src="assets/login.svg" alt="login-item" /></a>
           </li>
         </ul>
       </div>
@@ -90,6 +92,7 @@
         <button aria-label="Next" class="glider-next">»</button>
       </div>
 
+      <!-- Contenedor slider -->
       <div class="glider-contain">
         <div class="glider">
           <article class="cards">
@@ -296,6 +299,7 @@
       </div>
     </section>
 
+    <!-- Sección de Categorias -->
     <section class="container-categorias">
       <div class="title-categorias">
         <h2>NUESTRAS CATEGORÍAS</h2>
@@ -379,6 +383,7 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/glider.min.js"></script>
     <script>
+      // Script para el Slider de los productos
       new Glider(document.querySelector(".glider"), {
         slidesToScroll: 1,
         slidesToShow: 4,

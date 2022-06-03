@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <!-- Formulario-->
+    <main>
+      <div class="content-form">
+        <div class="content-login">
+          <h1>Inicia Sesión</h1>
+          <h4>
+            ¿No tienes una Cuenta? <a href="registro.html">Registrate aqui!</a>
+          </h4>
+
+          <!-- Datos-->
+          <form
+            class="informacion"
+            method="POST"
+            enctype="multipart/form-data"
+            action="#"
+          >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Contraseña"
+              required
+            />
+
+            <div class="content-options">
+              <a href="#">¿Olvidaste tu Contraseña?</a>
+            </div>
+
+            <input
+              type="submit"
+              value="Ingresar"
+              id="Ingresar"
+              name="Ingresar"
+            />
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

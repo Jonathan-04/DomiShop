@@ -1,0 +1,246 @@
+/* Formulario */
+main{
+
+    margin-top: 120px;
+    width: 100%;
+}
+
+.content-form{
+    
+    width: 100%;
+    margin: auto;
+}
+
+.content-register{
+
+    width: 100%;
+}
+
+.content-form h1{
+
+    font-weight: 100;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content-form h4{
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+.content-form h4 a{
+
+    color: blue;
+}
+
+.content-form form{
+
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+/* Style Emial */
+
+.content-form #email{
+
+    width: 100%;
+    padding: 10px;
+    border-style: none;
+    outline: 0px;
+    border-bottom: 1px solid silver;
+}
+
+.content-form #email:focus{
+
+    border-bottom: 2px solid blue;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+}
+
+/* Style Password */
+
+.content-form #password{
+
+    width: 100%;
+    padding: 10px;
+    border-style: none;
+    outline: 0px;
+    border-bottom: 1px solid silver;
+    margin-top: 20px;
+}
+
+.content-form #password:focus{
+
+    border-bottom: 2px solid blue;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+}
+
+/* Style Usuario */
+.content-form #user, #nombre, #apellidos{
+
+    width: 100%;
+    padding: 10px;
+    border-style: none;
+    outline: 0px;
+    border-bottom: 1px solid silver;
+    margin-top: 20px;
+}
+
+.content-form #user:focus, #nombre:focus, #apellidos:focus{
+
+    border-bottom: 2px solid blue;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+}
+
+/* Style cedula */
+.content-form #cedula{
+
+    width: 100%;
+    padding: 10px;
+    border-style: none;
+    outline: 0px;
+    border-bottom: 1px solid silver;
+    margin-top: 20px;
+}
+
+.content-form #cedula:focus{
+
+    border-bottom: 2px solid blue;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+}
+
+/* Style Email */
+.content-form #email{
+
+    width: 100%;
+    padding: 10px;
+    border-style: none;
+    outline: 0px;
+    border-bottom: 1px solid silver;
+    margin-top: 20px;
+}
+
+.content-form #email:focus{
+
+    border-bottom: 2px solid blue;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+}
+
+::-webkit-input-placeholder{
+
+    font-size: 20px;
+}
+
+/* Style Genero */
+
+.title-genero{
+
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: rgb(88, 88, 88);
+}
+
+
+.custom-select{
+    
+    width: 150px;
+    height: 45px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid silver;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+
+
+
+input[type="email"], input[type="password"]{
+
+    font-size: 20px;
+}
+
+input[type="text"]{
+
+    font-size: 20px;
+}
+
+/* Olvido de Password */
+
+.content-options{
+
+    text-align: right;
+    margin-top: 30px;
+}
+
+.content-options a{
+
+    color: blue;
+}
+
+/* Boton Inicio de Registro */
+
+input[type="submit"]{
+
+    width: 100%;
+    padding: 7px 40px;
+    font-size: 20px;
+    background: rgb(66, 66, 161);
+    color: white;
+    border-style: none;
+    border-radius: 3px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+
+input[type="submit"]:active{
+
+    background: rgba(77, 77, 143, 0.438);
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    outline-style: 0px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 400px){
+
+    main{
+
+        margin-top: 50px;
+    }
+
+    .content-form form{
+
+        width: 300px;
+    } 
+
+    .content-form h4{
+        
+        font-size: 18px;
+    }
+
+    input[type="submit"]{
+
+        font-size: 18px;
+        padding: 7px 50px;
+    }
+}
+
+
+
