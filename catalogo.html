@@ -74,6 +74,9 @@
       <div class="header-items">
         <ul>
           <li>
+            <img src="assets/account.svg" alt="account-item" />
+          </li>
+          <li>
             <img src="assets/favorite.svg" alt="favorite-item" />
           </li>
           <li>
@@ -131,7 +134,9 @@
     <div class="container-catg">
       <!-- Filtro -->
       <aside class="container-filtro">
-        <ul class="container-items-filtro">
+        <div class="show-filter" id="bg-filter"></div>
+        <p id="show-filter">Filtro</p>
+        <ul class="container-items-filtro" id="container-filtro">
           <li class="items-filtro">
             <span>Categoría</span>
             <ul class="select-items ks-cboxtags">
@@ -351,5 +356,6 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/form-login.js"></script>
+    <script src="js/show-filter.js"></script>
   </body>
 </html>
