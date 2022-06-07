@@ -92,6 +92,32 @@ header{
 
 @media screen and (max-width: 620px){
 
+    header{
+        justify-content: flex-start;
+    }
+
+    .header-items{
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        bottom: -150px;
+        background-color: rgb(245, 245, 245);
+        z-index: 1;
+        transition: all 300ms;
+    }
+
+    .header-items ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        place-items: center;
+    }
+
+    .header-title{
+        margin-left: 80px;
+    }
+
     .img-banner img{
         height: auto;
     }
@@ -123,6 +149,4 @@ header{
         opacity: 1;
         visibility: visible;
     }
-
-
 }

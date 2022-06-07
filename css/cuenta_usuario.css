@@ -1,0 +1,198 @@
+.contenedor-Usuario{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.titulo-cuenta{
+
+    text-align: center;
+    font-size: 25px;
+    margin-top: 100px;
+}
+
+/* CONTAINER DE TODO EL FILTRO */
+.container-cuentaUsuario{
+    position: relative;
+    width: 300px;
+    margin-top: 150px;
+    
+}
+
+.container-filtro{
+    margin: 5px;
+}
+
+/* ITEMS */
+.filtro-usuario{
+
+    margin: 5px; 
+}
+
+.filtro-usuario li{
+
+    padding: 5px;
+    padding: 15px;
+    margin: 10px;
+    margin-left: 0px;
+    list-style: none;
+    border-bottom: 1px solid rgb(187, 187, 187);
+}
+
+.filtro-usuario li a{
+
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    font-size: 18px;
+}
+
+#info-personal{
+
+    font-weight: bold;
+}
+
+
+
+/* DETALLES INFORMACION DEL USUARIO */ 
+
+.container-detallesUsuario{
+    position: relative;
+    width: 100%;
+    top: 150px;
+    margin-left: 90px;
+   
+}
+
+.detalle-informacion1{
+    
+    width: 100%;
+    border-bottom: 1px solid rgb(187, 187, 187);
+
+}
+
+.detalle-informacion1 h2{
+
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.detalle-informacion1 ul{
+
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.detalle-informacion1 ul li{
+
+    margin-right: 70px;
+    margin-bottom: 30px;
+}
+
+
+/* SEGUNDO DETALLE PERSONAL */
+
+.detalle-informacion2{
+    
+    margin-top: 70px;
+    width: 100%;
+    border-bottom: 1px solid rgb(187, 187, 187);
+}
+
+.detalle-informacion2 h2{
+
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.detalle-informacion2 ul{
+
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.detalle-informacion2 ul li{
+
+    margin-right: 70px;
+    margin-bottom: 30px;
+}
+
+
+/* DETALLES DIRECCION USUARIO */
+
+.detalle-direccion{
+
+    margin-top: 70px;
+    width: 100%;
+    
+}
+
+.detalle-direccion h2{
+
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.direccion-usuario{
+    width: 300px;
+    background-color: rgb(233, 233, 233);
+    margin-right: 30px;
+}
+
+.detalle-direccion ul{
+
+    list-style: none;
+    padding: 10px;
+}
+
+.detalle-direccion ul li{
+
+    margin: 15px;
+    color: rgb(75, 75, 75);
+}
+
+.cuadros-direccion{
+
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+#ciudad{
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* BOTON DE EDITAR INFORMACION */
+
+.detalle-direccion a{
+
+    position: relative;
+    top: 40px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+}
+
+.detalle-direccion a:hover{
+
+    color: rgb(0, 81, 255);
+}
+
+@media screen and (max-width: 620px) {
+    .contenedor-Usuario{
+        flex-wrap: wrap;
+    }
+
+    .container-cuentaUsuario{
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .container-detallesUsuario{
+        margin-left: 20px;
+    }
+}
