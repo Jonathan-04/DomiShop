@@ -432,6 +432,7 @@ input[type="submit"]:active{
 
 
 @media screen and (max-width: 620px) {
+    /* Datos de la Cuenta */
     .contenedor-Usuario{
         flex-wrap: wrap;
     }
@@ -444,5 +445,19 @@ input[type="submit"]:active{
 
     .container-detallesUsuario{
         margin-left: 20px;
+    }
+
+    /* Compras */
+    .container-comprasUsuario{
+        width: 100%;
+        margin-left: 20px;
+        top: 100px;
+    }
+
+    /* Favoritos */
+    .container-favoritosUsuario{
+        width: 100%;
+        margin-left: 20px;
+        top: 100px;
     }
 }
