@@ -181,6 +181,256 @@
     color: rgb(0, 81, 255);
 }
 
+
+/* ---------------------- COMPRAS ----------------------- */
+
+
+/* SECCION DE LAS COMPRAS DEL USUARIO */
+
+.container-comprasUsuario{
+
+    position: relative;
+    width: 60%;
+    top: 150px;
+    margin-left: 90px;
+    margin-right: 20px;
+}
+
+.container-comprasUsuario ul{
+
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-comprasUsuario ul li{
+
+    margin-right: 40px;
+}
+
+#titulo-compras{
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ITEMS DE COPMPRAS USUARIO */
+
+.comprasUsuario{
+
+    width: 100%;
+}
+
+/* TITULO */
+.titulo-comprasUsuario{
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5px;
+    background-color: rgb(230, 230, 230);
+}
+
+.titulo-comprasUsuario ul li{
+
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+#id-compras, #fecha-compra{
+
+    text-decoration:  none;
+    color: black;
+    font-weight: normal;
+}
+
+/* DETALLES */
+
+.detalles-compras{
+
+    
+    margin: 5px;
+}
+
+.detalles-compras ul{
+
+    list-style: none;
+    display: inline-block;
+}
+
+.detalles-compras ul li{
+
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.detalles-compras ul li label{
+
+    font-weight: normal;
+}
+
+#estado-compra{
+    color: green;
+    font-weight: bold;
+}
+
+/* BOTON DETALLES */
+
+.botonDetalles{
+
+    width: 100%;
+    padding-top: 10px;
+
+    margin-bottom: 10px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgb(124, 124, 124);
+}
+
+input[type="submit"]{
+
+    padding: 7px 40px;
+    font-size: 15px;
+    color: white;
+    background: black;
+    border-style: none;
+    border-radius: 3px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 50ms;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    display: block;
+    position: relative;
+}
+
+input[type="submit"]:active{
+
+    background: white;
+    color: black;
+    outline-style: 0px;
+}
+
+
+/* IMAGENES DE LAS COMPRAS */
+
+.detalleSpace{
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.imagenesCompras{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.imagencompra{
+
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.imagencompra a img{
+
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+/* ----------------------- FAVORITOS ---------------------*/
+/* SECCION DE FAVORITOS */
+
+.container-favoritosUsuario{
+
+    position: relative;
+    width: 50%;
+    top: 150px;
+    margin-left: 90px;
+    margin-right: 20px;
+
+
+}
+
+/* TITULO */
+ 
+.titulo-favoritos h2{
+
+    font-size: 18px;
+    margin-bottom: 100px;
+}
+
+/* ITEMS */
+/* CONTENEDOR */
+.items-favoritos{
+
+    position: relative;
+    margin-top: 25px;
+    
+    width: 100%;
+    background: rgb(238, 238, 238);
+}
+
+.style-favoritos{
+    
+    position: relative;
+    margin: 10px;
+    padding: 15px;
+}
+
+
+/* IMAGEN DE FAVORITO */
+.imagen-favorito{
+
+    position: relative;
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.imagen-favorito a img{
+    
+    width: 100%;
+    height: auto;
+    
+}
+
+/* INFO DEL FAVORITO */
+
+.info-favorito h2{
+
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-favorito p{
+
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+#estado-favorito{
+
+    color: green;
+}
+
+/* ITEM AL LADO DE LA IMAGEN */
+
+.style-favoritos{
+    
+    display: flex;
+}
+
+
+
+
 @media screen and (max-width: 620px) {
     .contenedor-Usuario{
         flex-wrap: wrap;

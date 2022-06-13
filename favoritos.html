@@ -2,17 +2,16 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi cuenta</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Favoritos</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/cuenta_usuario.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/footer.css">
-
 </head>
 
 <body>
@@ -87,32 +86,8 @@
         </div>
     </header>
 
-    <!-- Formulario de Login -->
-    <div class="bg-content-form" id="bg-form-login"></div>
-    <div class="content-form" id="form-login">
-        <div class="content-login">
-            <h1>Inicia Sesión</h1>
-            <h4>
-                ¿No tienes una Cuenta? <a href="registro.html">Registrate aqui!</a>
-            </h4>
 
-            <!-- Datos-->
-            <form class="informacion" method="POST" enctype="multipart/form-data" action="#">
-                <input type="email" id="email" name="email" placeholder="Email" required />
-                <input type="password" id="password" name="password" placeholder="Contraseña" required />
-
-                <div class="content-options">
-                    <a href="#">¿Olvidaste tu Contraseña?</a>
-                </div>
-
-                <input type="submit" value="Ingresar" id="Ingresar" name="Ingresar" />
-
-                <p id="btn-cerrar-login">Cerrar</p>
-            </form>
-        </div>
-    </div>
-
-    <div class="contenedor-Usuario">
+    <section class="contenedor-Usuario">
         <!-- FILTRO USUARIO -->
         <aside class="container-cuentaUsuario">
             <div class="container-filtro">
@@ -124,62 +99,62 @@
             </div>
         </aside>
 
+        <!-- CONTENEDOR DE FAVORITOS USUARIO -->
+        <div class="container-favoritosUsuario">
 
-
-        <!-- DETALLES ITEM (INFORMACION USUARIO) -->
-        <section class="container-detallesUsuario">
-
-            <!-- DATOS DE CUENTA-->
-            <div class="detalle-informacion1">
-                <h2>Datos de Cuenta</h2>
-                <ul class="informacion-usuario1">
-                    <li>Usuario: Jonathan04</li>
-                    <li>E-mail: jonathanvel84@gmail.com</li>
-                </ul>
+            <div class="titulo-favoritos">
+                <h2 id="titulo-favoritos">Mis Favoritos</h2>
             </div>
 
-            <!-- DATOS PERSONALES-->
-            <div class="detalle-informacion2">
-                <h2>Datos Personales</h2>
-                <ul class="informacion-usuario1">
-                    <li>Nombre: Jonathan</li>
-                    <li>Apellidos: Velásquez Vargas</li>
-                    <li>Documento: 111111111</li>
-                    <li>Celular: 11111111</li>
-                </ul>
-            </div>
+            <div class="items-favoritos">
+                <div class="style-favoritos">
+                    <div class="imagen-favorito">
+                        <a href="#"><img src="img/Oto-o-2019-mujeres-.jpg"></a>
 
-            <!-- DATOS DIRECCION -->
-
-
-            <div class="detalle-direccion">
-                <h2>Direccion</h2>
-
-                <div class="cuadros-direccion">
-                    <div class="direccion-usuario">
-                        <ul class="item-direccion">
-                            <li id="ciudad">Cali</li>
-                            <li id="direccion">Cra 111111</li>
-                            <li id="barrio">Barrio</li>
-                            <li id="observaciones">Observaciones:
-                                Esta es una observación
-                            </li>
-                        </ul>
+                    </div>
+                    <div class="info-favorito">
+                        <h2>Camisa Ref Mujer</h2>
+                        <p>$70.000</p>
+                        <p>Estado: <label id="estado-favorito">Disponible</label></p>
+                        <p>Vendidos (23)</p>
                     </div>
                 </div>
-
-                <a href="#" class="editar-informacionUsuario" id="editar_informacion">Editar</a>
-
             </div>
-        </section>
-    </div>
 
 
+            <div class="items-favoritos">
+                <div class="style-favoritos">
+                    <div class="imagen-favorito">
+                        <a href="#"><img src="img/Oto-o-2019-mujeres-.jpg"></a>
+
+                    </div>
+                    <div class="info-favorito">
+                        <h2>Camisa Ref Mujer</h2>
+                        <p>$70.000</p>
+                        <p>Estado: <label id="estado-favorito">Disponible</label></p>
+                        <p>Vendidos (23)</p>
+                    </div>
+                </div>
+            </div>
 
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/menu-header.js"></script>
-    <script src="js/form-login.js"></script>
+            <div class="items-favoritos">
+                <div class="style-favoritos">
+                    <div class="imagen-favorito">
+                        <a href="#"><img src="img/Oto-o-2019-mujeres-.jpg"></a>
+
+                    </div>
+                    <div class="info-favorito">
+                        <h2>Camisa Ref Mujer</h2>
+                        <p>$70.000</p>
+                        <p>Estado: <label id="estado-favorito">Disponible</label></p>
+                        <p>Vendidos (23)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>
