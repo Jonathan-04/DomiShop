@@ -1,0 +1,158 @@
+/* Container de los detalles del producto */
+.container-detalles-producto{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*------------- vista de las imagenes del Producto ---------- */
+
+.container-image{
+    display: flex;
+}
+
+.product-image1{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image1 img{
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 5px 10px;
+    object-fit: cover;
+}
+
+.product-image2 img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* ------------------- Detalles del Producto --------------- */
+
+.detalles-producto{
+    margin-top: 1px;
+    margin-left: 30px;
+
+}
+
+/* Titulo */
+.detalles-producto h1{
+    font-size: 28px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Referencia */
+.detalles-producto h2{
+    font-size: 18px;
+    font-weight: 200;
+    color: rgb(90, 90, 90);
+    margin-bottom: 30px;
+}
+
+/* Precio */
+.detalles-producto .precio_producto{
+    font-size: 25px;
+    font-weight: 200;
+}
+
+/* Color del producto */
+
+.color_producto{
+    margin-top: 30px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.color_producto label{
+    font-weight: bold;
+}
+
+.seleccion_color_producto{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+#seleccion_color_producto{
+    width: 120px;
+}
+
+.seleccion_color_producto label{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.seleccion_color_producto .color1{
+    background: white;
+}
+
+.seleccion_color_producto .color2{
+    background: #e6b4b0;
+}
+
+/* Talla del Producto */
+
+.talla_producto{
+    margin-top: 30px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+select:focus{ 
+    outline: none;
+}
+
+select{
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    height: 40px;
+    padding: 5px;
+    width: 60px;
+}
+
+/* Cantidad del producto */
+
+.cantidad_producto{
+    margin-top: 30px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.seleccion_cantidad_producto > input[type=number]{
+    width: 50px;
+    height: 40px;
+    text-align: center;
+}
+
+
+/* ----------- Responsive ------------ */
+@media screen and (max-width: 865px) {
+    .product-image2 img{
+        width: 400px;
+    }
+    
+}
+
+@media screen and (max-width: 761px) {
+    .detalles-producto{
+        margin-top: 60px;
+    }
+
+    .product-image2 img{
+        width: 100%;
+    }
+
+    .container-cards {
+        margin-top: 100px;
+    }
+}
