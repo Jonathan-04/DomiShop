@@ -75,9 +75,47 @@
           <!-- Cuenta -->
           <a href="mi-cuenta.html"><img src="assets/account.svg" alt="account-item" /></a>
         </li>
-        <li>
+        <li class="my-favorites">
           <!-- Productos Favoritos -->
-          <img src="assets/favorite.svg" alt="favorite-item" />
+          <img src="assets/favorite.svg" id="icon-favorite" alt="favorite-item" />
+          <div class="items-my-favorites" id="items-my-favorites">
+
+            <article class="card-favorite">
+              <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+              <ul>
+                <li>
+                  <h3>Camisa mujer Japón</h3>
+                </li>
+                <li>$20.000</li>
+                <li><a href="#">Eliminar</a></li>
+              </ul>
+            </article>
+
+            <article class="card-favorite">
+              <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+              <ul>
+                <li>
+                  <h3>Camisa mujer Japón</h3>
+                </li>
+                <li>$20.000</li>
+                <li><a href="#">Eliminar</a></li>
+              </ul>
+            </article>
+
+            <article class="card-favorite">
+              <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+              <ul>
+                <li>
+                  <h3>Camisa mujer Japón</h3>
+                </li>
+                <li>$20.000</li>
+                <li><a href="#">Eliminar</a></li>
+              </ul>
+            </article>
+
+            <a href="#" id="ver-favorites">Ver todo</a>
+          </div>
+
         </li>
         <li>
           <!-- Carrito de Compras -->
@@ -333,6 +371,7 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/menu-header.js"></script>
   <script src="js/form-login.js"></script>
+  <script src="js/item-favorites.js"></script>
   <script src="js/glider.min.js"></script>
   <script>
     // Script para el Slider de los productos

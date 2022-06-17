@@ -21,12 +21,13 @@
             <i class="menu-icon-header"><img src="assets/menu.svg" alt="menu-header" /></i>
             <!-- Navbar -->
             <nav class="container-nav-menu" id="nav-menu-show">
+
                 <!-- Menú desplegable -->
                 <div class="items-show">
                     <ul class="nav-menu">
-                        <!-- Items del Menú -->
-                        <li class="option-nav">
-                            <span>MUJERES</span>
+
+                        <!-- Items del Menú | Categorías -->
+                        <li class="option-nav"><span>MUJERES</span>
                             <ul class="nav-menu-items">
                                 <li><a href="catalogo.html">Camisas</a></li>
                                 <li>Jean</li>
@@ -34,8 +35,7 @@
                             </ul>
                         </li>
 
-                        <li class="option-nav">
-                            <span>HOMBRES</span>
+                        <li class="option-nav"><span>HOMBRES</span>
                             <ul class="nav-menu-items">
                                 <li>Camisas</li>
                                 <li>Camisetas</li>
@@ -44,48 +44,88 @@
                             </ul>
                         </li>
 
-                        <li class="option-nav">
-                            <span>GORRAS</span>
+                        <li class="option-nav"><span>GORRAS</span>
                             <ul class="nav-menu-items">
                                 <li>Visora Curva</li>
                                 <li>Visora Plana</li>
                             </ul>
                         </li>
 
-                        <li class="option-nav">
-                            <span>ESTAMPADOS</span>
+                        <li class="option-nav"><span>ESTAMPADOS</span>
                             <ul class="nav-menu-items">
                                 <li>Próximamente</li>
                             </ul>
                         </li>
+
                     </ul>
                 </div>
             </nav>
         </div>
         <div class="container-header">
             <div class="header-title">
-                <h1><a href="index.html">KoaShop</a></h1>
+                <h1>KoaShop</h1>
             </div>
         </div>
+        <!-- Items del Menú -->
         <div class="header-items" id="header-items">
             <ul>
                 <li>
-                    <a href="mi-cuenta.html">
-                        <img src="assets/account.svg" alt="account-item" /></a>
+                    <!-- Cuenta -->
+                    <a href="mi-cuenta.html"><img src="assets/account.svg" alt="account-item" /></a>
+                </li>
+                <li class="my-favorites">
+                    <!-- Productos Favoritos -->
+                    <img src="assets/favorite.svg" id="icon-favorite" alt="favorite-item" />
+                    <div class="items-my-favorites" id="items-my-favorites">
+
+                        <article class="card-favorite">
+                            <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+                            <ul>
+                                <li>
+                                    <h3>Camisa mujer Japón</h3>
+                                </li>
+                                <li>$20.000</li>
+                                <li><a href="#">Eliminar</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="card-favorite">
+                            <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+                            <ul>
+                                <li>
+                                    <h3>Camisa mujer Japón</h3>
+                                </li>
+                                <li>$20.000</li>
+                                <li><a href="#">Eliminar</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="card-favorite">
+                            <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+                            <ul>
+                                <li>
+                                    <h3>Camisa mujer Japón</h3>
+                                </li>
+                                <li>$20.000</li>
+                                <li><a href="#">Eliminar</a></li>
+                            </ul>
+                        </article>
+
+                        <a href="#" id="ver-favorites">Ver todo</a>
+                    </div>
+
                 </li>
                 <li>
-                    <img src="assets/favorite.svg" alt="favorite-item" />
-                </li>
-                <li>
+                    <!-- Carrito de Compras -->
                     <img src="assets/shopping_cart.svg" alt="shopping_cart-item" />
                 </li>
                 <li>
+                    <!-- Login -->
                     <img id="icon-login" src="assets/login.svg" alt="login-item" />
                 </li>
             </ul>
         </div>
     </header>
-
 
     <div class="contenedor-Usuario">
         <!-- FILTRO USUARIO -->
@@ -152,6 +192,7 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/menu-header.js"></script>
+    <script src="js/item-favorites.js"></script>
     <script src="js/form-login.js"></script>
 </body>
 

@@ -134,6 +134,27 @@ select{
     text-align: center;
 }
 
+/* Detalles secundarios del Producto */
+.detalles-secundarios-producto{
+    width: 50%;
+    margin: 60px 20px 20px 20px;
+
+}
+
+.detalles-secundarios-producto p{
+    font-size: 18px;
+    margin: 20px;
+}
+
+.detalles-secundarios-producto p span{
+    font-weight: bold;
+}
+
+/* Productos de Interés */
+.container-cards{
+    margin-top: 200px;
+}
+
 
 /* ----------- Responsive ------------ */
 @media screen and (max-width: 865px) {
@@ -153,6 +174,11 @@ select{
     }
 
     .container-cards {
-        margin-top: 100px;
+        margin-top: 120px;
+    }
+
+    .detalles-secundarios-producto{
+        width: 100%;
+        margin: 60px 10px 20px 10px;
     }
 }
