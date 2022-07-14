@@ -166,7 +166,24 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
         display: block;
     }
 
+    /* Cards de los productos */
+    .container-productos{
+        justify-content: space-around;
+        padding: 0px;
+        margin-top: 60px;
+    }
+
+    .cards{
+        width: 180px;
+    }
+
     .options-cards a{
         display: block;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .cards{
+        width: 170px;
     }
 }

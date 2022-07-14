@@ -21,6 +21,7 @@ h1,h3{
 
 h2,a,p,li,span, label, input[type="text"], input[type="email"], input[type="password"]{
     font-family: 'Quicksand', sans-serif;
+    outline: none;
 }
 
 a{
