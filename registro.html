@@ -1,82 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Registrarse</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/registro.css" />
-  </head>
-  <body>
-    <!-- Formulario-->
-    <main>
-      <div class="content-form">
-        <div class="content-register">
-          <h1>Registrarse</h1>
-          <h4>¿Ya tienes una cuenta? <a href="login.html">Ingresa aqui!</a></h4>
 
-          <!-- Datos-->
-          <form
-            class="informacion"
-            method="POST"
-            enctype="multipart/form-data"
-            action="#"
-          >
-            <input
-              type="text"
-              name="user"
-              id="user"
-              placeholder="Usuario"
-              required
-            />
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Contraseña"
-              required
-            />
-            <input
-              type="text"
-              name="nombre"
-              id="nombre"
-              placeholder="Nombre"
-              required
-            />
-            <input
-              type="text"
-              name="apellidos"
-              id="apellidos"
-              placeholder="Apellidos"
-              required
-            />
-            <input
-              type="text"
-              name="cedula"
-              id="cedula"
-              placeholder="Cedula"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Correo"
-              required
-            />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Registrarse</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/registro.css" />
+</head>
 
-            <p class="title-genero">Genero</p>
+<body>
+  <!-- Formulario-->
+  <main>
+    <div class="content-form">
+      <div class="content-register">
+        <h1>Registrarse</h1>
+        <h4>¿Ya tienes una cuenta? <a href="login.html">Ingresa aqui!</a></h4>
 
-            <select class="custom-select" name="genero" id="genero">
-              <option value="Femenino">Femenino</option>
-              <option value="Masculino">Masculino</option>
-            </select>
+        <!-- Datos-->
+        <form class="informacion" method="POST" enctype="multipart/form-data" action="dataBase/registroUsuarios.php">
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre" required />
+          <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required />
+          <input type="text" name="cedula" id="cedula" placeholder="Cedula" required />
+          <input type="email" name="email" id="email" placeholder="Correo" required />
+          <input type="password" name="clave" id="password" placeholder="Contraseña" required />
 
-            <input type="submit" name="Registrarse" value="Registrarse" />
-          </form>
-        </div>
+          <input type="submit" name="Registrarse" value="Registrarse" />
+        </form>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>
