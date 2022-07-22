@@ -166,21 +166,20 @@
 }
 
 /* BOTON DE EDITAR INFORMACION */
+.editar-informacionUsuario{
 
-.detalle-direccion a{
-
-    position: relative;
-    top: 40px;
-    text-decoration: none;
-    font-size: 20px;
-    color: rgb(100, 100, 100);
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid black;
+    font-weight: bold;
+    transition: all 300ms;
 }
 
-.detalle-direccion a:hover{
-
-    color: rgb(0, 81, 255);
+.editar-informacionUsuario:hover{
+    background-color: black;
+    color: white;
+    transition: all 300ms;
 }
-
 
 /* ---------------------- COMPRAS ----------------------- */
 

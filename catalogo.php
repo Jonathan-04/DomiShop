@@ -1,6 +1,8 @@
 <?php
 
+session_start();
 include_once 'components/component.php';
+include_once 'dataBase/funciones.php';
 
 ?>
 
@@ -32,201 +34,79 @@ include_once 'components/component.php';
 
   <div class="container-catg">
     <!-- Filtro -->
-    <aside class="container-filtro">
-      <div class="show-filter" id="bg-filter"></div>
-      <p id="show-filter">Filtro</p>
-      <ul class="container-items-filtro" id="container-filtro">
-        <li class="items-filtro">
-          <span>Categoría</span>
-          <ul class="select-items ks-cboxtags">
-            <li>
-              <input type="checkbox" id="1" value="#" /><label for="1">Camisas</label>
-            </li>
-            <li>
-              <input type="checkbox" id="2" value="#" /><label for="2">Camisetas</label>
-            </li>
-            <li>
-              <input type="checkbox" id="3" value="#" /><label for="3">Buzos</label>
-            </li>
-            <li>
-              <input type="checkbox" id="4" value="#" /><label for="4">Jean</label>
-            </li>
-          </ul>
-        </li>
-        <li class="items-filtro">
-          <span>Precio</span>
-          <ul class="select-items ks-cboxtags">
-            <li>
-              <input type="checkbox" id="5" value="#" /><label for="5">Mayor precio</label>
-            </li>
-            <li>
-              <input type="checkbox" id="6" value="#" /><label for="6">Menor precio</label>
-            </li>
-          </ul>
-        </li>
-        <li class="items-filtro">
-          <span>Tallas</span>
-          <ul class="select-items ks-cboxtags filtro-tallas">
-            <li>
-              <input type="checkbox" id="7" value="#" /><label for="7">S</label>
-            </li>
-            <li>
-              <input type="checkbox" id="8" value="#" /><label for="8">L</label>
-            </li>
-            <li>
-              <input type="checkbox" id="9" value="#" /><label for="9">M</label>
-            </li>
-            <li>
-              <input type="checkbox" id="10" value="#" /><label for="10">XL</label>
-            </li>
-          </ul>
-        </li>
-        <li class="items-filtro">
-          <span>Manga</span>
-          <ul class="select-items ks-cboxtags">
-            <li>
-              <input type="checkbox" id="11" value="#" /><label for="11">Manga corta</label>
-            </li>
-            <li>
-              <input type="checkbox" id="12" value="#" /><label for="12">Manga larga</label>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </aside>
+    <form id="form-check-filters">
+      <aside class="container-filtro">
+        <div class="show-filter" id="bg-filter"></div>
+        <p id="show-filter">Filtro</p>
+        <ul class="container-items-filtro" id="container-filtro">
+          <li class="items-filtro">
+            <span>Categoría</span>
+            <ul class="select-items ks-cboxtags">
+              <li>
+                <input type="checkbox" class="check-filter" id="1" name="id_categoria[]" value="1" /><label for="1">Camisas</label>
+              </li>
+              <li>
+                <input type="checkbox" class="check-filter" id="2" name="id_categoria[]" value="2" /><label for="2">Camisetas</label>
+              </li>
+              <li>
+                <input type="checkbox" class="check-filter" id="3" name="id_categoria[]" value="3" /><label for="3">Buzos</label>
+              </li>
+              <li>
+                <input type="checkbox" class="check-filter" id="4" name="id_categoria[]" value="4" /><label for="4">Jean</label>
+              </li>
+            </ul>
+          </li>
+          <li class="items-filtro">
+            <span>Precio</span>
+            <ul class="select-items ks-cboxtags">
+              <li>
+                <input type="checkbox" class="check-filter" id="5" name="precio[]" value="#" /><label for="5">Mayor precio</label>
+              </li>
+              <li>
+                <input type="checkbox" class="check-filter" id="6" name="precio[]" value="#" /><label for="6">Menor precio</label>
+              </li>
+            </ul>
+          </li>
+          <li class="items-filtro">
+            <span>Tallas</span>
+            <ul class="select-items ks-cboxtags filtro-tallas">
+              <li>
+                <input type="checkbox" class="check-filter" id="7" name="talla[]" value="S" /><label for="7">S</label>
+              </li>
+              <li>
+                <input type="checkbox" class="check-filter" id="8" name="talla[]" value="L" /><label for="8">L</label>
+              </li>
+              <li>
+                <input type="checkbox" class="check-filter" id="9" name="talla[]" value="M" /><label for="9">M</label>
+              </li>
+              <li>
+                <input type="checkbox" class="check-filter" id="10" name="talla[]" value="XL" /><label for="10">XL</label>
+              </li>
+            </ul>
+          </li>
+          <li class="items-filtro">
+            <span>Manga</span>
+            <ul class="select-items ks-cboxtags">
+              <li>
+                <input type="checkbox" class="check-filter" id="11" name="" value="#" /><label for="11">Manga corta</label>
+              </li>
+              <li>
+                <input type="checkbox" class="check-filter" id="12" name="" value="#" /><label for="12">Manga larga</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+    </form>
 
     <!-- Productos -->
-    <section class="container-productos">
+    <section class="container-productos" id="products">
       <!-- Items de los productos -->
-      <article class="cards">
-        <a class="container-cards-img" href="detalles-producto.php">
-          <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-          <img src="img/adidas1.png" class="img-back" alt="img-product" />
-        </a>
-        <h3>Camisa Adidas</h3>
-        <p>$58.000</p>
-        <div class="options-cards">
-          <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-          <a href="#"><span>
-              <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-        </div>
-      </article>
-
-      <article class="cards">
-        <a class="container-cards-img" href="#">
-          <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-          <img src="img/adidas1.png" class="img-back" alt="img-product" />
-        </a>
-        <h3>Camisa Adidas</h3>
-        <p>$58.000</p>
-        <div class="options-cards">
-          <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-          <a href="#"><span>
-              <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-        </div>
-      </article>
-
-      <article class="cards">
-        <a class="container-cards-img" href="#">
-          <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-          <img src="img/adidas1.png" class="img-back" alt="img-product" />
-        </a>
-        <h3>Camisa Adidas</h3>
-        <p>$58.000</p>
-        <div class="options-cards">
-          <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-          <a href="#"><span>
-              <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-        </div>
-      </article>
-
-      <article class="cards">
-        <a class="container-cards-img" href="#">
-          <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-          <img src="img/adidas1.png" class="img-back" alt="img-product" />
-        </a>
-        <h3>Camisa Adidas</h3>
-        <p>$58.000</p>
-        <div class="options-cards">
-          <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-          <a href="#"><span>
-              <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-        </div>
-      </article>
-
-      <article class="cards">
-        <a class="container-cards-img" href="#">
-          <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-          <img src="img/adidas1.png" class="img-back" alt="img-product" />
-        </a>
-        <h3>Camisa Adidas</h3>
-        <p>$58.000</p>
-        <div class="options-cards">
-          <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-          <a href="#"><span>
-              <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-        </div>
-      </article>
-
-      <article class="cards">
-        <a class="container-cards-img" href="#">
-          <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-          <img src="img/adidas1.png" class="img-back" alt="img-product" />
-        </a>
-        <h3>Camisa Adidas</h3>
-        <p>$58.000</p>
-        <div class="options-cards">
-          <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-          <a href="#"><span>
-              <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-        </div>
-      </article>
-
-      <article class="cards">
-        <a class="container-cards-img" href="#">
-          <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-          <img src="img/adidas1.png" class="img-back" alt="img-product" />
-        </a>
-        <h3>Camisa Adidas</h3>
-        <p>$58.000</p>
-        <div class="options-cards">
-          <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-          <a href="#"><span>
-              <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-        </div>
-      </article>
-
-      <article class="cards">
-        <a class="container-cards-img" href="#">
-          <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-          <img src="img/adidas1.png" class="img-back" alt="img-product" />
-        </a>
-        <h3>Camisa Adidas</h3>
-        <p>$58.000</p>
-        <div class="options-cards">
-          <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-          <a href="#"><span>
-              <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-        </div>
-      </article>
-
-      <article class="cards">
-        <a class="container-cards-img" href="#">
-          <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-          <img src="img/adidas1.png" class="img-back" alt="img-product" />
-        </a>
-        <h3>Camisa Adidas</h3>
-        <p>$58.000</p>
-        <div class="options-cards">
-          <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-          <a href="#"><span>
-              <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-        </div>
-      </article>
 
     </section>
 
   </div>
+
   <!-- Barra de Navegación-->
   <div class="barra_navegacion">
     <nav aria-label="Page navigation example">
@@ -250,10 +130,12 @@ include_once 'components/component.php';
   <?php echo footer(); ?>
 
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/menu-header.js"></script>
   <script src="js/form-login.js"></script>
   <script src="js/item-favorites.js"></script>
   <script src="js/show-filter.js"></script>
+  <script src="js/filtro.js"></script>
 </body>
 
 </html>

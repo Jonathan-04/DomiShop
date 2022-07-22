@@ -4,7 +4,7 @@ session_start();
 
 include_once 'dataBase/conexion.php';
 include_once 'components/component.php';
-
+include_once 'dataBase/funciones.php';
 
 ?>
 
@@ -58,110 +58,7 @@ include_once 'components/component.php';
     <!-- Contenedor slider productos -->
     <div class="glider-contain">
       <div class="glider">
-        <article class="cards">
-          <a class="container-cards-img" href="#">
-            <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-            <img src="img/adidas1.png" class="img-back" alt="img-product" />
-          </a>
-          <h3>Camisa Adidas</h3>
-          <p>$58.000</p>
-          <div class="options-cards">
-            <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-            <a href="#"><span>
-                <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-          </div>
-        </article>
-        <article class="cards">
-          <a class="container-cards-img" href="#">
-            <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-            <img src="img/adidas1.png" class="img-back" alt="img-product" />
-          </a>
-          <h3>Camisa Adidas</h3>
-          <p>$58.000</p>
-          <div class="options-cards">
-            <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-            <a href="#"><span>
-                <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-          </div>
-        </article>
-        <article class="cards">
-          <a class="container-cards-img" href="#">
-            <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-            <img src="img/adidas1.png" class="img-back" alt="img-product" />
-          </a>
-          <h3>Camisa Adidas</h3>
-          <p>$58.000</p>
-          <div class="options-cards">
-            <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-            <a href="#"><span>
-                <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-          </div>
-        </article>
-        <article class="cards">
-          <a class="container-cards-img" href="#">
-            <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-            <img src="img/adidas1.png" class="img-back" alt="img-product" />
-          </a>
-          <h3>Camisa Adidas</h3>
-          <p>$58.000</p>
-          <div class="options-cards">
-            <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-            <a href="#"><span>
-                <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-          </div>
-        </article>
-        <article class="cards">
-          <a class="container-cards-img" href="#">
-            <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-            <img src="img/adidas1.png" class="img-back" alt="img-product" />
-          </a>
-          <h3>Camisa Adidas</h3>
-          <p>$58.000</p>
-          <div class="options-cards">
-            <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-            <a href="#"><span>
-                <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-          </div>
-        </article>
-        <article class="cards">
-          <a class="container-cards-img" href="#">
-            <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-            <img src="img/adidas1.png" class="img-back" alt="img-product" />
-          </a>
-          <h3>Camisa Adidas</h3>
-          <p>$58.000</p>
-          <div class="options-cards">
-            <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-            <a href="#"><span>
-                <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-          </div>
-        </article>
-        <article class="cards">
-          <a class="container-cards-img" href="#">
-            <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-            <img src="img/adidas1.png" class="img-back" alt="img-product" />
-          </a>
-          <h3>Camisa Adidas</h3>
-          <p>$58.000</p>
-          <div class="options-cards">
-            <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-            <a href="#"><span>
-                <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-          </div>
-        </article>
-        <article class="cards">
-          <a class="container-cards-img" href="#">
-            <img src="img/t-shirt-large3.png" class="img-front" alt="img-product" />
-            <img src="img/adidas1.png" class="img-back" alt="img-product" />
-          </a>
-          <h3>Camisa Adidas</h3>
-          <p>$58.000</p>
-          <div class="options-cards">
-            <a href="#"><span><img src="assets/favorite.svg" alt="favorite-item" /> </span></a>
-            <a href="#"><span>
-                <img src="assets/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
-          </div>
-        </article>
+        <?php echo getProductosColeccion(); ?>
       </div>
     </div>
   </section>

@@ -1,6 +1,14 @@
 <?php
 
+session_start();
+
 include_once 'components/component.php';
+include_once 'dataBase/funciones.php';
+
+if (!isset($_SESSION['id']) || !$_SESSION['id']) {
+
+    header("Location: index.php");
+}
 
 ?>
 
@@ -31,52 +39,9 @@ include_once 'components/component.php';
         <?php echo filtroUsuario(); ?>
 
 
-
         <!-- DETALLES ITEM (INFORMACION USUARIO) -->
         <section class="container-detallesUsuario">
-
-            <!-- DATOS DE CUENTA-->
-            <div class="detalle-informacion1">
-                <h2>Datos de Cuenta</h2>
-                <ul class="informacion-usuario1">
-                    <li>Usuario: Jonathan04</li>
-                    <li>E-mail: jonathanvel84@gmail.com</li>
-                </ul>
-            </div>
-
-            <!-- DATOS PERSONALES-->
-            <div class="detalle-informacion2">
-                <h2>Datos Personales</h2>
-                <ul class="informacion-usuario1">
-                    <li>Nombre: Jonathan</li>
-                    <li>Apellidos: Velásquez Vargas</li>
-                    <li>Documento: 111111111</li>
-                    <li>Celular: 11111111</li>
-                </ul>
-            </div>
-
-            <!-- DATOS DIRECCION -->
-
-
-            <div class="detalle-direccion">
-                <h2>Direccion</h2>
-
-                <div class="cuadros-direccion">
-                    <div class="direccion-usuario">
-                        <ul class="item-direccion">
-                            <li id="ciudad">Cali</li>
-                            <li id="direccion">Cra 111111</li>
-                            <li id="barrio">Barrio</li>
-                            <li id="observaciones">Observaciones:
-                                Esta es una observación
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <a href="#" class="editar-informacionUsuario" id="editar_informacion">Editar</a>
-
-            </div>
+            <?php echo getDatosCuenta(); ?>
         </section>
     </div>
 
