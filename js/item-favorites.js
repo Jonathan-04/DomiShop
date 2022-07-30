@@ -1,4 +1,3 @@
-$(document).ready(function(){
 
     let btnFavorites = document.getElementById('icon-favorite')
     let favorites = document.getElementById('items-my-favorites')
@@ -25,6 +24,3 @@ $(document).ready(function(){
         }
             
     })
-
-
-})

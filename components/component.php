@@ -61,11 +61,9 @@ function navbar()
             <ul>
                 <li>
                     <!-- Cuenta -->
-                    <?php
-                    if (isset($_SESSION['id'])) {
-                        echo '<a href="mi-cuenta.php"><img src="assets/icons/account.svg" alt="account-item" /></a>';
-                    }
-                    ?>
+                    <a href="mi-cuenta.php">
+                        <img src="assets/icons/account.svg" alt="account-item" />
+                    </a>
                 </li>
                 <li class="my-favorites">
                     <!-- Productos Favoritos -->

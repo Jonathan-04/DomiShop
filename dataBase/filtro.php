@@ -1,4 +1,5 @@
 <?php
+//Creditos video tutorial a: https://youtu.be/_hlepJa-L7U | ITIC Tutoriales
 
 require 'conexion.php';
 

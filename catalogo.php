@@ -57,6 +57,17 @@ include_once 'dataBase/funciones.php';
             </ul>
           </li>
           <li class="items-filtro">
+            <span>Género</span>
+            <ul class="select-items ks-cboxtags">
+              <li>
+                <input type="checkbox" class="check-filter" id="13" name="id_seccion_para[]" value="1" /><label for="13">Mujer</label>
+              </li>
+              <li>
+                <input type="checkbox" class="check-filter" id="14" name="id_seccion_para[]" value="2" /><label for="14">Hombre</label>
+              </li>
+            </ul>
+          </li>
+          <li class="items-filtro">
             <span>Precio</span>
             <ul class="select-items ks-cboxtags">
               <li>

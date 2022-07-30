@@ -60,6 +60,7 @@ include_once 'dataBase/funciones.php';
     <script src="js/form-login.js"></script>
     <script src="js/item-favorites.js"></script>
     <script src="js/glider.min.js"></script>
+    <script src="js/imageProduc.js"></script>
 
     <!-- Script para el Slider de los productos -->
     <script>

@@ -119,14 +119,14 @@ function getDetallesProducto()
         <article class="container-image">
             <!-- IMAGENES DEL PRODUCTO -->
             <div class="detalles-producto-imagen product-image1">
-                <img class="image-product1" src="img/Oto-o-2019-mujeres-Casual-blusa-blanca-coreana-de-man.jpg">
-                <img class="image-product1" src="img/Oto-o-2019-mujeres-.jpg">
-                <img class="image-product1" src="img/Oto-o-2019-mujeres-Casual-blusa-blanca-coreana-de-man.jpg">
-                <img class="image-product1" src="img/Oto-o-2019-mujeres-.jpg">
+                <img class="image-product1" src="dataBase/imagen_productos/<?php echo $item['imagen1']; ?>" onclick=" mostrarImagen(this)">
+                <img class="image-product1" src="img/Oto-o-2019-mujeres-.jpg" onclick="mostrarImagen(this)">
+                <img class="image-product1" src="img/Oto-o-2019-mujeres-Casual-blusa-blanca-coreana-de-man.jpg" onclick="mostrarImagen(this)">
+                <img class="image-product1" src="img/Oto-o-2019-mujeres-.jpg" onclick="mostrarImagen(this)">
             </div>
 
             <div class="detalles-producto-imagen product-image2">
-                <img class="image-product2" src="dataBase/imagen_productos/<?php echo $item['imagen1']; ?>">
+                <img class="image-product2" id="imagenPrincipal" src="dataBase/imagen_productos/<?php echo $item['imagen1']; ?>">
 
             </div>
         </article>
@@ -144,7 +144,7 @@ function getDetallesProducto()
             </label>
 
             <!-- SELECICION DEL COLOR-->
-            <p class="color_producto">Color: <label> Blanco </label></p>
+            <p class="color_producto">Color: </p>
 
             <select class="seleccion_color_producto" name="" id="seleccion_color_producto">
 
@@ -171,7 +171,7 @@ function getDetallesProducto()
             <div class="seleccion_cantidad_producto">
                 <input type="number" value="1">
             </div>
-            <a href="checkout.html" class="btn-comprar">Comprar</a>
+            <a href="checkout.php" class="btn-comprar">Comprar</a>
             <button class="btn-add-carrito">Agregar al Carrito</button>
         </div>
 

@@ -57,23 +57,24 @@
 
 }
 
-.options-cards a{
+.options-cards p{
     display: none;
     width: 50%;
     padding: 2px;
     transition: all 300ms;
 }
 
-.options-cards a:nth-child(1):hover{
+.options-cards p:nth-child(1):hover{
     background-color: rgb(255, 206, 206);
 }
 
-.options-cards a:nth-child(2):hover{
+.options-cards p:nth-child(2):hover{
     background-color: rgb(219, 255, 206);
 }
 
-.cards:hover .options-cards a{
+.cards:hover .options-cards p{
     display: block;
+    cursor: pointer;
 }
 
 .slider-btn{
@@ -106,7 +107,7 @@
         margin-top: -100px;
     }
 
-    .options-cards a{
+    .options-cards p{
         display: block;
     }
 }

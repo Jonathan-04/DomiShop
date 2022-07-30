@@ -1,3 +1,5 @@
+//Creditos video tutorial a: https://youtu.be/_hlepJa-L7U | ITIC Tutoriales
+
 $(function(){
 
     get_productos();
@@ -34,13 +36,11 @@ function get_productos(){
                         "<h3>"+Productos.titulo+"</h3>"+
                         "<p>$ "+Productos.precio+"</p>"+
                     "<div class='options-cards'>"+
-                        "<a href='#'><span><img src='assets/icons/favorite.svg' alt='favorite-item' /> </span></a>"+
-                        "<a href='#'><span>"+
-                        "<img src='assets/icons/shopping_cart.svg' alt='shopping_cart-item' /> </span></a>"+
+                        "<p id='add-favorite'><span><img src='assets/icons/favorite.svg' alt='favorite-item' /> </span></p>"+
+                        "<p><span><img src='assets/icons/shopping_cart.svg' alt='shopping_cart-item' /> </span></p>"+
                     "</div>"+
                 "</article>"               
-
-        
+                
                 $("#products").append(row);
             });
 
@@ -48,5 +48,4 @@ function get_productos(){
         }
     })
 }
-
 
