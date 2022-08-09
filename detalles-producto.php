@@ -15,13 +15,13 @@ include_once 'dataBase/funciones.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/login.css" />
-    <link rel="stylesheet" href="css/detalles_producto.css" />
-    <link rel="stylesheet" href="css/glider.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/cards.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <link rel="stylesheet" href="assets/css/detalles_producto.css" />
+    <link rel="stylesheet" href="assets/css/glider.min.css" />
 </head>
 
 <body>
@@ -55,12 +55,12 @@ include_once 'dataBase/funciones.php';
     <?php echo footer(); ?>
 
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/menu-header.js"></script>
-    <script src="js/form-login.js"></script>
-    <script src="js/item-favorites.js"></script>
-    <script src="js/glider.min.js"></script>
-    <script src="js/imageProduc.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/menu-header.js"></script>
+    <script src="assets/js/form-login.js"></script>
+    <script src="assets/js/item-favorites.js"></script>
+    <script src="assets/js/glider.min.js"></script>
+    <script src="assets/js/imageProduc.js"></script>
 
     <!-- Script para el Slider de los productos -->
     <script>

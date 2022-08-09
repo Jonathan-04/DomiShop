@@ -15,20 +15,16 @@ include_once 'dataBase/funciones.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/checkout.css">
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="stylesheet" href="assets/css/footer.css" />
 </head>
 
 <body>
 
     <!-- HEADER -->
     <?php echo navbar(); ?>
-
-
-
-
 
     <main class="container-checkout">
         <h2>Checkout</h2>
@@ -103,19 +99,19 @@ include_once 'dataBase/funciones.php';
                     <p>Orden</p>
                     <div class="products-details">
                         <ul class="details">
-                            <li><img src="img/Oto-o-2019-mujeres-.jpg" alt=""></li>
+                            <li><img src="assets/img/Oto-o-2019-mujeres-.jpg" alt=""></li>
                             <li>Camisa Oto Mujer x 1</li>
                             <li id="details-price">$40.000</li>
                         </ul>
 
                         <ul class="details">
-                            <li><img src="img/Oto-o-2019-mujeres-.jpg" alt=""></li>
+                            <li><img src="assets/img/Oto-o-2019-mujeres-.jpg" alt=""></li>
                             <li>Camisa Oto Mujer x 1</li>
                             <li id="details-price">$40.000</li>
                         </ul>
 
                         <ul class="details">
-                            <li><img src="img/Oto-o-2019-mujeres-.jpg" alt=""></li>
+                            <li><img src="assets/img/Oto-o-2019-mujeres-.jpg" alt=""></li>
                             <li>Camisa Oto Mujer x 1</li>
                             <li id="details-price">$40.000</li>
                         </ul>
@@ -130,9 +126,9 @@ include_once 'dataBase/funciones.php';
 
 
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/menu-header.js"></script>
-    <script src="js/item-favorites.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/menu-header.js"></script>
+    <script src="assets/js/item-favorites.js"></script>
 </body>
 
 </html>

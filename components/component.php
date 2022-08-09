@@ -15,20 +15,20 @@ function navbar()
                     <ul class="nav-menu">
 
                         <!-- Items del Menú | Categorías -->
-                        <li class="option-nav"><span>MUJERES</span>
+                        <li class="option-nav"><a href="catalogo.php?catg=13&tipo="><span>MUJERES</span></a>
                             <ul class="nav-menu-items">
-                                <li><a href="catalogo.php">Camisas</a></li>
-                                <li>Jean</li>
-                                <li>Buzos</li>
+                                <li><a href="catalogo.php?catg=13&tipo=1">Camisas</a></li>
+                                <li><a href="catalogo.php?catg=13&tipo=4">Jean</a></li>
+                                <li><a href="catalogo.php?catg=13&tipo=3">Buzos</a></li>
                             </ul>
                         </li>
 
-                        <li class="option-nav"><span>HOMBRES</span>
+                        <li class="option-nav"><a href="catalogo.php?catg=14&tipo="><span>HOMBRES</span></a>
                             <ul class="nav-menu-items">
-                                <li>Camisas</li>
-                                <li>Camisetas</li>
-                                <li>Jean</li>
-                                <li>Buzos</li>
+                                <li><a href="catalogo.php?catg=14&tipo=1">Camisas</a></li>
+                                <li><a href="catalogo.php?catg=14&tipo=2">Camisetas</a></li>
+                                <li><a href="catalogo.php?catg=14&tipo=4">Jean</a></li>
+                                <li><a href="catalogo.php?catg=14&tipo=3">Buzos</a></li>
                             </ul>
                         </li>
 
@@ -73,7 +73,7 @@ function navbar()
                     <div class="items-my-favorites" id="items-my-favorites">
 
                         <article class="card-favorite">
-                            <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+                            <img src="assets/img/Oto-o-2019-mujeres-.jpg" alt="">
                             <ul>
                                 <li>
                                     <h3>Camisa mujer Japón</h3>
@@ -84,7 +84,7 @@ function navbar()
                         </article>
 
                         <article class="card-favorite">
-                            <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+                            <img src="assets/img/Oto-o-2019-mujeres-.jpg" alt="">
                             <ul>
                                 <li>
                                     <h3>Camisa mujer Japón</h3>
@@ -95,7 +95,7 @@ function navbar()
                         </article>
 
                         <article class="card-favorite">
-                            <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+                            <img src="assets/img/Oto-o-2019-mujeres-.jpg" alt="">
                             <ul>
                                 <li>
                                     <h3>Camisa mujer Japón</h3>
@@ -116,7 +116,7 @@ function navbar()
                     <div class="items-my-cart" id="items-my-cart">
 
                         <article class="card-favorite">
-                            <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+                            <img src="assets/img/Oto-o-2019-mujeres-.jpg" alt="">
                             <ul>
                                 <li>
                                     <h3>Camisa mujer Japón</h3>
@@ -127,7 +127,7 @@ function navbar()
                         </article>
 
                         <article class="card-favorite">
-                            <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+                            <img src="assets/img/Oto-o-2019-mujeres-.jpg" alt="">
                             <ul>
                                 <li>
                                     <h3>Camisa mujer Japón</h3>
@@ -138,7 +138,7 @@ function navbar()
                         </article>
 
                         <article class="card-favorite">
-                            <img src="img/Oto-o-2019-mujeres-.jpg" alt="">
+                            <img src="assets/img/Oto-o-2019-mujeres-.jpg" alt="">
                             <ul>
                                 <li>
                                     <h3>Camisa mujer Japón</h3>

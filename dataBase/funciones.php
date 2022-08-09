@@ -92,9 +92,8 @@ function getProductosColeccion()
                 <h3><?php echo $filas['titulo']; ?></h3>
                 <p>$ <?php echo $filas['precio']; ?></p>
                 <div class="options-cards">
-                    <a href="#"><span><img src="assets/icons/favorite.svg" alt="favorite-item" /> </span></a>
-                    <a href="#"><span>
-                            <img src="assets/icons/shopping_cart.svg" alt="shopping_cart-item" /> </span></a>
+                    <p id='add-favorite'><span><img src='assets/icons/favorite.svg' alt='favorite-item' /> </span></p>
+                    <p><span><img src='assets/icons/shopping_cart.svg' alt='shopping_cart-item' /> </span></p>
                 </div>
             </article>
         <?php
@@ -120,9 +119,9 @@ function getDetallesProducto()
             <!-- IMAGENES DEL PRODUCTO -->
             <div class="detalles-producto-imagen product-image1">
                 <img class="image-product1" src="dataBase/imagen_productos/<?php echo $item['imagen1']; ?>" onclick=" mostrarImagen(this)">
-                <img class="image-product1" src="img/Oto-o-2019-mujeres-.jpg" onclick="mostrarImagen(this)">
-                <img class="image-product1" src="img/Oto-o-2019-mujeres-Casual-blusa-blanca-coreana-de-man.jpg" onclick="mostrarImagen(this)">
-                <img class="image-product1" src="img/Oto-o-2019-mujeres-.jpg" onclick="mostrarImagen(this)">
+                <img class="image-product1" src="assets/img/Oto-o-2019-mujeres-.jpg" onclick="mostrarImagen(this)">
+                <img class="image-product1" src="assets/img/Oto-o-2019-mujeres-Casual-blusa-blanca-coreana-de-man.jpg" onclick="mostrarImagen(this)">
+                <img class="image-product1" src="assets/img/Oto-o-2019-mujeres-.jpg" onclick="mostrarImagen(this)">
             </div>
 
             <div class="detalles-producto-imagen product-image2">

@@ -4,6 +4,9 @@ session_start();
 include_once 'components/component.php';
 include_once 'dataBase/funciones.php';
 
+$checkboxValue = $_GET['catg'];
+$checkboxValue2 = $_GET['tipo'];
+
 ?>
 
 <!DOCTYPE html>
@@ -16,12 +19,12 @@ include_once 'dataBase/funciones.php';
   <meta name="description" content="Línea de ropa moderna con una excelente calidad" />
   <title>Catálogo</title>
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/cards.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/login.css" />
-  <link rel="stylesheet" href="css/catalogo.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/cards.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/login.css" />
+  <link rel="stylesheet" href="assets/css/catalogo.css" />
 </head>
 
 <body>
@@ -140,13 +143,28 @@ include_once 'dataBase/funciones.php';
   <!-- Footer -->
   <?php echo footer(); ?>
 
-  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/menu-header.js"></script>
-  <script src="js/form-login.js"></script>
-  <script src="js/item-favorites.js"></script>
-  <script src="js/show-filter.js"></script>
-  <script src="js/filtro.js"></script>
+  <script src="assets/js/menu-header.js"></script>
+  <script src="assets/js/form-login.js"></script>
+  <script src="assets/js/item-favorites.js"></script>
+  <script src="assets/js/show-filter.js"></script>
+  <script src="assets/js/filtro.js"></script>
+  <script src="assets/js/add-favorites.js"></script>
+
+
+  <script>
+    let genero = <?php echo json_encode($checkboxValue); ?>;
+    let categoria = <?php echo json_encode($checkboxValue2); ?>
+
+    function checked(idGenero, idCategoria) {
+      document.getElementById(`${idGenero}`).checked = true;
+      document.getElementById(`${idCategoria}`).checked = true;
+    }
+
+
+    checked(genero, categoria)
+  </script>
 </body>
 
 </html>

@@ -13,11 +13,11 @@ include_once 'components/component.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Favoritos</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/cuenta_usuario.css">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/cuenta_usuario.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
 <body>
@@ -35,7 +35,7 @@ include_once 'components/component.php';
             <div class="items-favoritos">
                 <div class="style-favoritos">
                     <div class="imagen-favorito">
-                        <a href="#"><img src="img/Oto-o-2019-mujeres-.jpg"></a>
+                        <a href="#"><img src="assets/img/Oto-o-2019-mujeres-.jpg"></a>
 
                     </div>
                     <div class="info-favorito">
@@ -51,7 +51,7 @@ include_once 'components/component.php';
             <div class="items-favoritos">
                 <div class="style-favoritos">
                     <div class="imagen-favorito">
-                        <a href="#"><img src="img/Oto-o-2019-mujeres-.jpg"></a>
+                        <a href="#"><img src="assets/img/Oto-o-2019-mujeres-.jpg"></a>
 
                     </div>
                     <div class="info-favorito">
@@ -67,7 +67,7 @@ include_once 'components/component.php';
             <div class="items-favoritos">
                 <div class="style-favoritos">
                     <div class="imagen-favorito">
-                        <a href="#"><img src="img/Oto-o-2019-mujeres-.jpg"></a>
+                        <a href="#"><img src="assets/img/Oto-o-2019-mujeres-.jpg"></a>
 
                     </div>
                     <div class="info-favorito">
@@ -84,10 +84,10 @@ include_once 'components/component.php';
     <!-- FOOTER -->
     <?php echo footer(); ?>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/menu-header.js"></script>
-    <script src="js/item-favorites.js"></script>
-    <script src="js/form-login.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/menu-header.js"></script>
+    <script src="assets/js/item-favorites.js"></script>
+    <script src="assets/js/form-login.js"></script>
 </body>
 
 </html>

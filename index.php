@@ -19,13 +19,13 @@ include_once 'dataBase/funciones.php';
   <meta name=description content="Línea de ropa moderna con una excelente calidad">
   <title>Inicio</title>
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/cards.css" />
-  <link rel="stylesheet" href="css/estilo_categorias.css" />
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="css/glider.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/cards.css" />
+  <link rel="stylesheet" href="assets/css/estilo_categorias.css" />
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/glider.min.css" />
 </head>
 
 <body>
@@ -40,7 +40,7 @@ include_once 'dataBase/funciones.php';
   <!-- Banner -->
   <article>
     <div class="img-banner">
-      <img src="img/2e6a77913878b8cac8225ad880045a1f.jpg" alt="banner-img" />
+      <img src="assets/img/2e6a77913878b8cac8225ad880045a1f.jpg" alt="banner-img" />
     </div>
   </article>
 
@@ -73,7 +73,7 @@ include_once 'dataBase/funciones.php';
     <div class="container-items-categorias">
       <article class="item-categoria">
         <div class="item-title-categoria">
-          <a href=""><img src="img/categoria_camisas.png" alt="item-image" />
+          <a href=""><img src="assets/img/categoria_camisas.png" alt="item-image" />
             <div class="item-title-categoria">
               <p>CAMISAS</p>
             </div>
@@ -81,7 +81,7 @@ include_once 'dataBase/funciones.php';
       </article>
 
       <article class="item-categoria">
-        <a href=""><img src="img/categoria_jean.png" alt="item-image" />
+        <a href=""><img src="assets/img/categoria_jean.png" alt="item-image" />
           <div class="item-title-categoria">
             <p>JEAN</p>
           </div>
@@ -89,7 +89,7 @@ include_once 'dataBase/funciones.php';
       </article>
 
       <article class="item-categoria">
-        <a href=""><img src="img/categoria_buzos1.jpg" alt="item-image" />
+        <a href=""><img src="assets/img/categoria_buzos1.jpg" alt="item-image" />
           <div class="item-title-categoria">
             <p>BUZOS</p>
           </div>
@@ -97,7 +97,7 @@ include_once 'dataBase/funciones.php';
       </article>
 
       <article class="item-categoria">
-        <a href=""><img src="img/categoria_gorras.jpg" alt="item-image" />
+        <a href=""><img src="assets/img/categoria_gorras.jpg" alt="item-image" />
           <div class="item-title-categoria">
             <p>GORRAS</p>
           </div>
@@ -109,11 +109,11 @@ include_once 'dataBase/funciones.php';
   <!-- Footer -->
   <?php echo footer(); ?>
 
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/menu-header.js"></script>
-  <script src="js/form-login.js"></script>
-  <script src="js/item-favorites.js"></script>
-  <script src="js/glider.min.js"></script>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/menu-header.js"></script>
+  <script src="assets/js/form-login.js"></script>
+  <script src="assets/js/item-favorites.js"></script>
+  <script src="assets/js/glider.min.js"></script>
 
   <!-- Script para el Slider de los productos -->
   <script>

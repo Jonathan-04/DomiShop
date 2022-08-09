@@ -42,6 +42,8 @@ function get_productos(){
                 "</article>"               
                 
                 $("#products").append(row);
+
+
             });
 
 
