@@ -1,6 +1,17 @@
-$(window).on('load', function(){
+$(document).on('click', '.add-favorite', function () {
+    // your function here
+   let id = this.id;
 
-    $('#add-favorite').on('click', function(){
-        alert("asdasd")
-    })
-})
+   $.ajax({
+        
+        url: 'dataBase/add-favorito.php',
+        type: 'POST',
+        data: {id:id},
+        dataType: 'json',
+
+        success:function(data){
+          let icon = data['icon'];
+          $('#add_'+id).html(icon);
+        }
+   });
+});

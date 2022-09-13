@@ -73,7 +73,7 @@ include_once 'dataBase/funciones.php';
     <div class="container-items-categorias">
       <article class="item-categoria">
         <div class="item-title-categoria">
-          <a href=""><img src="assets/img/categoria_camisas.png" alt="item-image" />
+          <a href="catalogo.php?catg=&tipo=1"><img src="assets/img/categoria_camisas.png" alt="item-image" />
             <div class="item-title-categoria">
               <p>CAMISAS</p>
             </div>
@@ -81,7 +81,7 @@ include_once 'dataBase/funciones.php';
       </article>
 
       <article class="item-categoria">
-        <a href=""><img src="assets/img/categoria_jean.png" alt="item-image" />
+        <a href="catalogo.php?catg=&tipo=4"><img src="assets/img/categoria_jean.png" alt="item-image" />
           <div class="item-title-categoria">
             <p>JEAN</p>
           </div>
@@ -89,7 +89,7 @@ include_once 'dataBase/funciones.php';
       </article>
 
       <article class="item-categoria">
-        <a href=""><img src="assets/img/categoria_buzos1.jpg" alt="item-image" />
+        <a href="catalogo.php?catg=&tipo=3"><img src="assets/img/categoria_buzos1.jpg" alt="item-image" />
           <div class="item-title-categoria">
             <p>BUZOS</p>
           </div>
@@ -97,7 +97,7 @@ include_once 'dataBase/funciones.php';
       </article>
 
       <article class="item-categoria">
-        <a href=""><img src="assets/img/categoria_gorras.jpg" alt="item-image" />
+        <a href="catalogo.php?catg=&tipo="><img src="assets/img/categoria_gorras.jpg" alt="item-image" />
           <div class="item-title-categoria">
             <p>GORRAS</p>
           </div>

@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include_once 'components/component.php';
 
 ?>
@@ -31,54 +32,9 @@ include_once 'components/component.php';
         <?php echo filtroUsuario(); ?>
 
         <!-- CONTENEDOR DE FAVORITOS USUARIO -->
-        <div class="container-favoritosUsuario">
-            <div class="items-favoritos">
-                <div class="style-favoritos">
-                    <div class="imagen-favorito">
-                        <a href="#"><img src="assets/img/Oto-o-2019-mujeres-.jpg"></a>
-
-                    </div>
-                    <div class="info-favorito">
-                        <h2>Camisa Ref Mujer</h2>
-                        <p>$70.000</p>
-                        <p>Estado: <label id="estado-favorito">Disponible</label></p>
-                        <p>Vendidos (23)</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="items-favoritos">
-                <div class="style-favoritos">
-                    <div class="imagen-favorito">
-                        <a href="#"><img src="assets/img/Oto-o-2019-mujeres-.jpg"></a>
-
-                    </div>
-                    <div class="info-favorito">
-                        <h2>Camisa Ref Mujer</h2>
-                        <p>$70.000</p>
-                        <p>Estado: <label id="estado-favorito">Disponible</label></p>
-                        <p>Vendidos (23)</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="items-favoritos">
-                <div class="style-favoritos">
-                    <div class="imagen-favorito">
-                        <a href="#"><img src="assets/img/Oto-o-2019-mujeres-.jpg"></a>
-
-                    </div>
-                    <div class="info-favorito">
-                        <h2>Camisa Ref Mujer</h2>
-                        <p>$70.000</p>
-                        <p>Estado: <label id="estado-favorito">Disponible</label></p>
-                        <p>Vendidos (23)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <main class="container-favoritosUsuario">
+            <?php echo getFavoritesAccount(); ?>
+        </main>
     </section>
 
     <!-- FOOTER -->

@@ -114,11 +114,10 @@ $checkboxValue2 = $_GET['tipo'];
     </form>
 
     <!-- Productos -->
-    <section class="container-productos" id="products">
+    <ul class="container-productos" id="products">
       <!-- Items de los productos -->
 
-    </section>
-
+    </ul>
   </div>
 
   <!-- Barra de Navegación-->
@@ -157,13 +156,13 @@ $checkboxValue2 = $_GET['tipo'];
     let genero = <?php echo json_encode($checkboxValue); ?>;
     let categoria = <?php echo json_encode($checkboxValue2); ?>
 
-    function checked(idGenero, idCategoria) {
-      document.getElementById(`${idGenero}`).checked = true;
-      document.getElementById(`${idCategoria}`).checked = true;
+    if (genero) {
+      document.getElementById(`${genero}`).checked = true;
     }
 
-
-    checked(genero, categoria)
+    if (categoria) {
+      document.getElementById(`${categoria}`).checked = true;
+    }
   </script>
 </body>
 

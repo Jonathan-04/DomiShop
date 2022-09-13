@@ -7,6 +7,7 @@
     position: relative;
     width: 150px;
     height: 100vh;
+    margin-right: 30px;
 }
 
 #show-filter{
@@ -25,11 +26,18 @@
 /* Contenedor de los Productos */
 .container-productos{
     width: 100%;
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            150px,
+            250px
+        )
+        
+    );
+    gap: 20px;
 }
-
 .container-productos article{
     margin: 10px;
     margin-bottom: 50px;
@@ -173,17 +181,22 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
         margin-top: 60px;
     }
 
-    .cards{
-        width: 180px;
-    }
-
     .options-cards a{
         display: block;
     }
 }
 
-@media screen and (max-width: 400px){
-    .cards{
-        width: 170px;
+@media screen and (max-width: 490px){
+    .container-productos{
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(
+                150px,
+                1fr
+            )
+            
+        );
+        gap: 20px;
     }
 }

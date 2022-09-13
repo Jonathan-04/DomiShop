@@ -27,9 +27,17 @@
 }
 
 .inputs-checkout p{
+    padding: 10px;
     margin-bottom: 50px;
     font-weight: bold;
     font-size: 18px;
+}
+
+#title-form-checkout{
+  background-color: rgb(239, 239, 239);
+  height: 40px;
+  display: flex;
+  place-items: center;
 }
 
 .inputs-data-checkout{
@@ -149,7 +157,43 @@
   #details-price{
     font-weight: bold;
   }
-  
+
+  #order-title{
+    font-weight: bold;
+  }
+
+  .product-payment{
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .product-payment p{
+    margin-bottom: 30px;
+  }
+
+  .product-payment ul{
+    width: 83%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .product-payment ul li{
+    width: 100px;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .product-pay li:nth-child(1), .envio-pay li:nth-child(1){
+    color: rgb(77, 77, 77);
+  }
+
+  .total-pay{
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: rgb(239, 239, 239);
+  }
 
 
 @media screen and (max-width: 670px){

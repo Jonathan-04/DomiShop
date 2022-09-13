@@ -122,9 +122,9 @@
 /* DETALLES DIRECCION USUARIO */
 
 .detalle-direccion{
-
     margin-top: 70px;
     width: 100%;
+    margin-bottom: 40px;
     
 }
 
@@ -415,10 +415,15 @@ input[type="submit"]:active{
 }
 
 
-#estado-favorito{
+#estado-favorito-on{
 
     color: green;
 }
+
+#estado-favorito-off{
+    color: red;
+}
+
 
 /* ITEM AL LADO DE LA IMAGEN */
 

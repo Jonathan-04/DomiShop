@@ -28,7 +28,7 @@ function get_productos(){
             $.each(JSON.parse(data), function(key, Productos){
                 
                 let row = ""+
-                "<article class='cards'>"+
+                "<li class='cards'>"+
                         "<a class='container-cards-img' href='detalles-producto.php?referencia="+Productos.referencia+"'>"+
                             "<img src=dataBase/imagen_productos/"+Productos.imagen1+' class="img-front" alt="img-product" />'+
                             "<img src='' class='img-back' alt='img-product' />"+
@@ -36,13 +36,12 @@ function get_productos(){
                         "<h3>"+Productos.titulo+"</h3>"+
                         "<p>$ "+Productos.precio+"</p>"+
                     "<div class='options-cards'>"+
-                        "<p id='add-favorite'><span><img src='assets/icons/favorite.svg' alt='favorite-item' /> </span></p>"+
+                        "<p class='add-favorite' id='"+Productos.referencia+"'><span id='add_"+Productos.referencia+"'><img src='assets/icons/add-favorite.png' alt='favorite-item' /></span></p>"+
                         "<p><span><img src='assets/icons/shopping_cart.svg' alt='shopping_cart-item' /> </span></p>"+
                     "</div>"+
-                "</article>"               
+                "</li>"               
                 
                 $("#products").append(row);
-
 
             });
 

@@ -84,7 +84,7 @@ function getProductosColeccion()
 
         foreach ($producto as $filas) {
         ?>
-            <article class="cards">
+            <article class="cards" id="cards-colection">
                 <a class="container-cards-img" href="detalles-producto.php?referencia=<?php echo $filas['referencia'] ?>">
                     <img src="dataBase/imagen_productos/<?php echo $filas['imagen1']; ?>" class="img-front" alt="img-product" />
                     <img src="dataBase/imagen_productos/<?php echo $filas['imagen1']; ?>" class="img-back" alt="img-product" />
@@ -117,16 +117,14 @@ function getDetallesProducto()
         ?>
         <article class="container-image">
             <!-- IMAGENES DEL PRODUCTO -->
+            <div class="detalles-producto-imagen product-image2">
+                <img class="image-product2" id="imagenPrincipal" src="dataBase/imagen_productos/<?php echo $item['imagen1']; ?>">
+            </div>
             <div class="detalles-producto-imagen product-image1">
                 <img class="image-product1" src="dataBase/imagen_productos/<?php echo $item['imagen1']; ?>" onclick=" mostrarImagen(this)">
                 <img class="image-product1" src="assets/img/Oto-o-2019-mujeres-.jpg" onclick="mostrarImagen(this)">
                 <img class="image-product1" src="assets/img/Oto-o-2019-mujeres-Casual-blusa-blanca-coreana-de-man.jpg" onclick="mostrarImagen(this)">
                 <img class="image-product1" src="assets/img/Oto-o-2019-mujeres-.jpg" onclick="mostrarImagen(this)">
-            </div>
-
-            <div class="detalles-producto-imagen product-image2">
-                <img class="image-product2" id="imagenPrincipal" src="dataBase/imagen_productos/<?php echo $item['imagen1']; ?>">
-
             </div>
         </article>
 
@@ -178,6 +176,96 @@ function getDetallesProducto()
             <p><span>Disponible:</span> <?php echo $item['stock']; ?> Unidades</p>
             <p><span>Descripción:</span> <?php echo $item['descripcion']; ?></p>
         </div>
+        <?php
+    }
+}
+
+
+function getFavorites()
+{
+
+    require 'conexion.php';
+
+    $sql = "SELECT titulo, imagen1, precio 
+            FROM productos
+            INNER JOIN favoritos
+            ON productos.referencia = favoritos.referencia_producto
+            WHERE id_usuario = '" . $_SESSION['id'] . "' ";
+
+    $ejecutar = $conexion->prepare($sql);
+    $ejecutar->execute();
+    $favoritos = $ejecutar->fetchAll();
+
+    if ($ejecutar->rowCount() > 0) {
+
+        foreach ($favoritos as $favorito) {
+        ?>
+            <article class="card-favorite">
+                <img src="dataBase/imagen_productos/<?php echo $favorito['imagen1']; ?>" alt="image-product">
+                <ul>
+                    <li>
+                        <h3><?php echo $favorito['titulo']; ?></h3>
+                    </li>
+                    <li>$ <?php echo $favorito['precio']; ?></li>
+                    <li><a href="#">Eliminar</a></li>
+                </ul>
+            </article>
+        <?php
+        }
+    } else {
+        ?>
+        <h2 class="title-no-favorites">Aún no tienes Favoritos</h2>
+        <?php
+
+    }
+}
+
+function getFavoritesAccount()
+{
+
+    require 'conexion.php';
+
+    $sql = "SELECT *
+            FROM productos
+            INNER JOIN favoritos
+            ON productos.referencia = favoritos.referencia_producto
+            WHERE id_usuario = '" . $_SESSION['id'] . "' ";
+
+    $ejecutar = $conexion->prepare($sql);
+    $ejecutar->execute();
+    $favoritos = $ejecutar->fetchAll();
+
+    if ($ejecutar->rowCount() > 0) {
+
+        foreach ($favoritos as $favorito) {
+        ?>
+            <article class="items-favoritos">
+                <div class="style-favoritos">
+                    <div class="imagen-favorito">
+                        <a href="#"><img src="dataBase/imagen_productos/<?php echo $favorito['imagen1']; ?>"></a>
+
+                    </div>
+                    <div class="info-favorito">
+                        <h2> <?php echo $favorito['titulo']; ?></h2>
+                        <p>$ <?php echo $favorito['precio']; ?></p>
+                        <?php
+                        if ($favorito['estatus'] === 0) {
+                            echo '<p>Estado: <label id="estado-favorito-on">Disponible</label></p>';
+                        } else {
+                            echo '<p>Estado: <label id="estado-favorito-off">No Disponible</label></p>';
+                        }
+                        ?>
+
+                        <p>Vendidos (23)</p>
+                    </div>
+                </div>
+            </article>
+        <?php
+        }
+    } else {
+        ?>
+        <h2 class="title-no-favorites">Aún no tienes Favoritos</h2>
 <?php
+
     }
 }
