@@ -150,6 +150,7 @@ $checkboxValue2 = $_GET['tipo'];
   <script src="assets/js/show-filter.js"></script>
   <script src="assets/js/filtro.js"></script>
   <script src="assets/js/add-favorites.js"></script>
+  <script src="assets/js/add-carrito.js"></script>
 
 
   <script>

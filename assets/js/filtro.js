@@ -37,7 +37,7 @@ function get_productos(){
                         "<p>$ "+Productos.precio+"</p>"+
                     "<div class='options-cards'>"+
                         "<p class='add-favorite' id='"+Productos.referencia+"'><span id='add_"+Productos.referencia+"'><img src='assets/icons/add-favorite.png' alt='favorite-item' /></span></p>"+
-                        "<p><span><img src='assets/icons/shopping_cart.svg' alt='shopping_cart-item' /> </span></p>"+
+                        "<p class='add-car' id='"+Productos.referencia+"'><span id='addCar_"+Productos.referencia+"'><img src='assets/icons/add-car.png' alt='car-item' /></span></p>"+
                     "</div>"+
                 "</li>"               
                 

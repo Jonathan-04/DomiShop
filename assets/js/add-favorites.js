@@ -1,5 +1,5 @@
 $(document).on('click', '.add-favorite', function () {
-    // your function here
+
    let id = this.id;
 
    $.ajax({
@@ -10,8 +10,15 @@ $(document).on('click', '.add-favorite', function () {
         dataType: 'json',
 
         success:function(data){
-          let icon = data['icon'];
-          $('#add_'+id).html(icon);
+
+          let response = data['response'];
+
+          if(response === 'error'){
+            alert("Tienes que iniciar sesión para poder agregarlo a favoritos");
+          }else{
+            let icon = data['icon'];
+            $('#add_'+id).html(icon);
+          }
         }
    });
 });

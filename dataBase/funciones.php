@@ -186,37 +186,38 @@ function getFavorites()
 
     require 'conexion.php';
 
-    $sql = "SELECT titulo, imagen1, precio 
-            FROM productos
-            INNER JOIN favoritos
-            ON productos.referencia = favoritos.referencia_producto
-            WHERE id_usuario = '" . $_SESSION['id'] . "' ";
+    if (isset($_SESSION['id'])) {
+        $sql = "SELECT titulo, imagen1, precio 
+        FROM productos
+        INNER JOIN favoritos
+        ON productos.referencia = favoritos.referencia_producto
+        WHERE id_usuario = '" . $_SESSION['id'] . "' ";
 
-    $ejecutar = $conexion->prepare($sql);
-    $ejecutar->execute();
-    $favoritos = $ejecutar->fetchAll();
+        $ejecutar = $conexion->prepare($sql);
+        $ejecutar->execute();
+        $favoritos = $ejecutar->fetchAll();
 
-    if ($ejecutar->rowCount() > 0) {
+        if ($ejecutar->rowCount() > 0) {
 
-        foreach ($favoritos as $favorito) {
+            foreach ($favoritos as $favorito) {
         ?>
-            <article class="card-favorite">
-                <img src="dataBase/imagen_productos/<?php echo $favorito['imagen1']; ?>" alt="image-product">
-                <ul>
-                    <li>
-                        <h3><?php echo $favorito['titulo']; ?></h3>
-                    </li>
-                    <li>$ <?php echo $favorito['precio']; ?></li>
-                    <li><a href="#">Eliminar</a></li>
-                </ul>
-            </article>
-        <?php
+                <article class="card-favorite">
+                    <img src="dataBase/imagen_productos/<?php echo $favorito['imagen1']; ?>" alt="image-product">
+                    <ul>
+                        <li>
+                            <h3><?php echo $favorito['titulo']; ?></h3>
+                        </li>
+                        <li>$ <?php echo $favorito['precio']; ?></li>
+                        <li><a href="#">Eliminar</a></li>
+                    </ul>
+                </article>
+            <?php
+            }
+        } else {
+            echo '<h2 class="title-no-favorites">Aún no tienes Favoritos</h2>';
         }
     } else {
-        ?>
-        <h2 class="title-no-favorites">Aún no tienes Favoritos</h2>
-        <?php
-
+        echo '<h2 class="title-no-favorites">Aún no tienes Favoritos</h2>';
     }
 }
 
@@ -238,7 +239,7 @@ function getFavoritesAccount()
     if ($ejecutar->rowCount() > 0) {
 
         foreach ($favoritos as $favorito) {
-        ?>
+            ?>
             <article class="items-favoritos">
                 <div class="style-favoritos">
                     <div class="imagen-favorito">
@@ -265,7 +266,93 @@ function getFavoritesAccount()
     } else {
         ?>
         <h2 class="title-no-favorites">Aún no tienes Favoritos</h2>
-<?php
+        <?php
 
+    }
+}
+
+function getCountFavorites()
+{
+
+    require 'conexion.php';
+
+    if (isset($_SESSION['id'])) {
+        $sql = "SELECT COUNT(*) FROM favoritos WHERE id_usuario = '" . $_SESSION['id'] . "' ";
+        $ejecutar = $conexion->prepare($sql);
+        $ejecutar->execute();
+
+        $count = $ejecutar->fetch(PDO::FETCH_NUM);
+        $countFav = reset($count);
+
+        if ($countFav > 0) {
+            echo "<span id='count-favorites'>" . $countFav . "</span>";
+        } else {
+            echo "<span></span>";
+        }
+    } else {
+        echo "<span></span>";
+    }
+}
+
+function getCountCarrito()
+{
+
+    require 'conexion.php';
+
+    if (isset($_SESSION['id'])) {
+        $sql = "SELECT COUNT(*) FROM carrito WHERE id_usuario = '" . $_SESSION['id'] . "' ";
+        $ejecutar = $conexion->prepare($sql);
+        $ejecutar->execute();
+
+        $count = $ejecutar->fetch(PDO::FETCH_NUM);
+        $countCar = reset($count);
+
+        if ($countCar > 0) {
+            echo "<span id='count-carrito'>" . $countCar . "</span>";
+        } else {
+            echo "<span></span>";
+        }
+    } else {
+        echo "<span></span>";
+    }
+}
+
+function getCarrito()
+{
+
+    require 'conexion.php';
+
+    if (isset($_SESSION['id'])) {
+        $sql = "SELECT titulo, imagen1, precio 
+        FROM productos
+        INNER JOIN carrito
+        ON productos.referencia = carrito.referencia_producto
+        WHERE id_usuario = '" . $_SESSION['id'] . "' ";
+
+        $ejecutar = $conexion->prepare($sql);
+        $ejecutar->execute();
+        $carrito = $ejecutar->fetchAll();
+
+        if ($ejecutar->rowCount() > 0) {
+
+            foreach ($carrito as $itemCarrito) {
+        ?>
+                <article class="card-favorite">
+                    <img src="dataBase/imagen_productos/<?php echo $itemCarrito['imagen1']; ?>" alt="image-product">
+                    <ul>
+                        <li>
+                            <h3><?php echo $itemCarrito['titulo']; ?></h3>
+                        </li>
+                        <li>$ <?php echo $itemCarrito['precio']; ?></li>
+                        <li><a href="#">Eliminar</a></li>
+                    </ul>
+                </article>
+<?php
+            }
+        } else {
+            echo '<h2 class="title-no-favorites">Carrito Vacío</h2>';
+        }
+    } else {
+        echo '<h2 class="title-no-favorites">Carrito Vacío</h2>';
     }
 }

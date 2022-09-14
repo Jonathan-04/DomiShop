@@ -69,7 +69,7 @@ function navbar()
                 </li>
                 <li class="my-favorites">
                     <!-- Productos Favoritos -->
-                    <span id="count-favorites">4</span><img src="assets/icons/favorite.svg" id="icon-favorite" alt="favorite-item" />
+                    <?php getCountFavorites(); ?><img src="assets/icons/favorite.svg" id="icon-favorite" alt="favorite-item" />
                     <a href="favoritos.html" id="btn-favorites"><img src="assets/icons/favorite.svg" alt="favorite-item" /></a>
 
                     <div class="items-my-favorites" id="items-my-favorites">
@@ -81,42 +81,11 @@ function navbar()
                 <li>
                     <!-- Carrito de Compras -->
 
-                    <span id="count-carrito">4</span><img src="assets/icons/shopping_cart.svg" id="icon-carrito" alt="shopping_cart-item" />
+                    <?php getCountCarrito(); ?><img src="assets/icons/shopping_cart.svg" id="icon-carrito" alt="shopping_cart-item" />
 
                     <div class="items-my-cart" id="items-my-cart">
 
-                        <article class="card-favorite">
-                            <img src="assets/img/Oto-o-2019-mujeres-.jpg" alt="">
-                            <ul>
-                                <li>
-                                    <h3>Camisa mujer Japón</h3>
-                                </li>
-                                <li>$20.000</li>
-                                <li><a href="#">Eliminar</a></li>
-                            </ul>
-                        </article>
-
-                        <article class="card-favorite">
-                            <img src="assets/img/Oto-o-2019-mujeres-.jpg" alt="">
-                            <ul>
-                                <li>
-                                    <h3>Camisa mujer Japón</h3>
-                                </li>
-                                <li>$20.000</li>
-                                <li><a href="#">Eliminar</a></li>
-                            </ul>
-                        </article>
-
-                        <article class="card-favorite">
-                            <img src="assets/img/Oto-o-2019-mujeres-.jpg" alt="">
-                            <ul>
-                                <li>
-                                    <h3>Camisa mujer Japón</h3>
-                                </li>
-                                <li>$20.000</li>
-                                <li><a href="#">Eliminar</a></li>
-                            </ul>
-                        </article>
+                        <?php echo getCarrito(); ?>
 
                         <a href="#" id="ver-cart">Ver todo</a>
                     </div>
